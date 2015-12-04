@@ -1,0 +1,66 @@
+﻿
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/MyScripts/TitleLogic.js"></script>
+@*<script>
+    angular.module('textHandler', [])
+    .controller('textController', ['$scope', function ($scope) {
+        $scope.list = [];
+        $scope.text = 'Casablanca';
+        $scope.submit = function () {
+            if ($scope.text) {
+                $scope.list.push(angular.element(document.getElementById('ngcontroller')).scope().getFilteredData(this.text));
+                $scope.text = '';
+            }
+        }
+    }]);
+</script>*@
+
+<h1>Titles View</h1>
+<div ng-app="ngmodule">
+    @*<form ng-submit="submit()" ng-controller="textController">*@
+        @*<form ng-submit="submit()" ng-controller="ngcontroller">*@
+    <form ng-controller="ngcontroller">
+
+        @*<div ng-controller="ngcontroller">*@
+        <div>
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <td>Enter Search Value:</td>
+                    <td>
+                        @*<input type="text" ng-model="filterValue" class="form-control" ng-change="getFilteredData()" />*@
+                        @*<input type="submit" id="submit" value="submit">*@
+                        @*<button type="submit" ng-click="getFilteredData()">Submit</button>*@
+                        <input type="text" ng-model="filterValue" />
+                        <input type="button" ng-click="getFilteredData()" value="Search" />
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th>Title Name</th>
+                        <th>Release Year</th>
+                        <th>Processed Date-Time UTC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="Title in Titles track by $index">
+                        <td>{{Title.TitleName}}</td>
+                        <td>{{Title.ReleaseYear}}</td>
+                        <td>{{Title.ProcessedDateTimeUTC}}</td>
+                        <td><button ng-click="AwardInfo(Title.TitleId)" value="Award Info" href="~/Award/Award/Title.TitleId" /></td>
+                        <td><button ng-click="OtherNameInfo(Title.TitleId)" value="Other Names" href="~/OtherName/OtherName/Title.TitleId" /></td>
+                        <td><button ng-click="StoryLineInfo(Title.TitleId)" value="StoryLine Info" href="~/StoryLine/StoryLine/Title.TitleId" /></td>                        
+                    </tr>
+                </tbody>
+            </table>
+            <span>{{Message}}</span>
+        </div>
+
+
+    </form>
+</div>

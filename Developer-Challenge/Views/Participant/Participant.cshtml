@@ -1,0 +1,24 @@
+﻿
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/MyScripts/ParticipantLogic.js"></script>
+
+
+<h1>Participants View</h1>
+<div ng-app="Participantngmodule">
+    <form ng-controller="Participantngcontroller">
+        <div>
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+
+                    <tr><td><th>Name</th><td><td>{{Participant.Name}}</td></tr>
+                    <tr><td><th>Participant Type</th><td><td>{{Participant.ParticipantType}}</td></tr>                    
+
+                </thead>
+            </table>
+        </div>
+    </form>
+</div>

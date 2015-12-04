@@ -1,0 +1,26 @@
+﻿
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/MyScripts/AwardLogic.js"></script>
+
+
+<h1>Awards View</h1>
+<div ng-app="Awardngmodule">
+    <form ng-controller="Awardngcontroller">
+        <div>
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+                    
+                    <tr><td><th>Award</th><td><td>{{Award.Award}}</td></tr>
+                    <tr><td><th>Award Won</th><td><td>{{Award.AwardWon}}</td></tr>
+                    <tr><td><th>Award Year</th><td><td>{{Award.AwardYear}}</td></tr>
+                    <tr><td><th>Award Company</th><td><td>{{Award.AwardCompany}}</td></tr>
+                    
+                </thead>                
+            </table>           
+        </div>
+    </form>
+</div>

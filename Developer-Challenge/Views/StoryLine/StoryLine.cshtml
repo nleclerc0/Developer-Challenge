@@ -1,0 +1,25 @@
+﻿
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/MyScripts/StoryLineLogic.js"></script>
+
+
+<h1>StoryLines View</h1>
+<div ng-app="StoryLinengmodule">
+    <form ng-controller="StoryLinengcontroller">
+        <div>
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+
+                    <tr><td><th>Type</th><td><td>{{StoryLine.Type}}</td></tr>
+                    <tr><td><th>Language</th><td><td>{{StoryLine.Language}}</td></tr>
+                    <tr><td><th>Description</th><td><td>{{StoryLine.Description}}</td></tr>
+                    
+                </thead>
+            </table>
+        </div>
+    </form>
+</div>

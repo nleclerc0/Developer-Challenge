@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+
+               <h1 class="site-title">Developer Challenge</h1>
+                    
+        </div>
+    </header>
+    @RenderBody()
+
+    <footer>
+        <div class="panel-footer">By: Nicholas Leclerc</div>        
+    </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/MyScripts/OtherNameLogic.js"></script>
+
+
+<h1>OtherNames View</h1>
+<div ng-app="OtherNamengmodule">
+    <form ng-controller="OtherNamengcontroller">
+        <div>
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+
+                    <tr><td><th>Title Name</th><td><td>{{OtherName.TitleName}}</td></tr>
+                    <tr><td><th>Title Name Language</th><td><td>{{OtherName.TitleNameLanguage}}</td></tr>
+                    <tr><td><th>Title Name Type</th><td><td>{{OtherName.TitleNameType}}</td></tr>                    
+
+                </thead>
+            </table>
+        </div>
+    </form>
+</div>
